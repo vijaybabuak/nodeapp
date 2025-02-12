@@ -72,5 +72,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: deploy-step
-        uses: ./.github/workflows/resuable.yml
+        uses: ./.github/workflows/reusable.yml
 
