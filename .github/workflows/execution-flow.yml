@@ -69,8 +69,5 @@ jobs:
           path: dist
   deploy:
     needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: deploy-step
-        uses: ./.github/workflows/reusable.yml
+    uses: ./.github/workflows/reusable.yml
 
