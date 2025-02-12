@@ -71,7 +71,7 @@ jobs:
           name: dist-files
           path: dist
       - name: setoutputs
-        run: echo "filename=dist-files" >> $GITHUB_OUTPUTS
+        run: echo "filename=dist-files" >> $GITHUB_OUTPUT
   deploy:
     needs: build
     uses: ./.github/workflows/reusable.yml
