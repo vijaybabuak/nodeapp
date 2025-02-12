@@ -48,7 +48,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     outputs:
-      artifact-name: ${{ steps.upload-artifact.outputs.artifact-name }}
+      artifact-name: ${{ steps.upload-artifact.outputs.filename }}
     steps:
       - name: Get code
         uses: actions/checkout@v4
@@ -71,7 +71,7 @@ jobs:
           name: dist-files
           path: dist
       - name: setoutputs
-        run: echo "artifact-name=dist-files" >> $GITHUB_OUTPUTS
+        run: echo "filename=dist-files" >> $GITHUB_OUTPUTS
   deploy:
     needs: build
     uses: ./.github/workflows/reusable.yml
